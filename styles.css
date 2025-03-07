@@ -1,0 +1,331 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4e1d2;
+    margin: 0;
+    padding: 0;
+    background: url('banner1.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    /* Makes it cover the full screen */
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #d29366;
+    color: white;
+    padding: 15px;
+    font-size: 24px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-info a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.user-info a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation */
+nav {
+    background-color: #ffcc80;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #f4a261;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #e76f51;
+}
+
+/* Services Section */
+main {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.service {
+    background-color: #ffcc80;
+    padding: 20px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.service:hover {
+    transform: scale(1.05);
+    background-color: #f4a261;
+}
+
+.service h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.service p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.service button {
+    margin-top: 10px;
+    /* Push button below the text */
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #e76f51;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.service button:hover {
+    background-color: #d84315;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    background-color: #f4a261;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* Make sure the page takes full height */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure main content expands to push footer down */
+main {
+    flex: 1;
+}
+
+/* Fix footer at the bottom */
+footer {
+    background-color: #d29366;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.booking-form,
+.confirmation-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.booking h2 {
+    color: #5a3e2b;
+}
+
+.booking p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.book-now-btn {
+    background-color: #d29366;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-now-btn:hover {
+    background-color: #b6754c;
+}
+
+.booking-form {
+    display: flex;
+    /* Ensure the form is visible */
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    margin: auto;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.booking-form input,
+.booking-form select {
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.booking-form button {
+    background-color: #d29366;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.checkmark {
+    font-size: 50px;
+    color: green;
+    margin-bottom: 10px;
+}
+
+footer {
+    margin-top: 30px;
+    background-color: #d29366;
+    color: white;
+    padding: 15px;
+}
+
+.login-form {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 35%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.login-form label {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.login-form input {
+    padding: 12px;
+    /* Increased padding */
+    font-size: 18px;
+    /* Bigger text */
+    margin-top: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.login-form button {
+    background-color: #d29366;
+    color: white;
+    padding: 12px;
+    font-size: 20px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.login-form button:hover {
+    background-color: #b6754c;
+}
+
+.auth-section {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 35%;
+    margin: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auth-section h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.auth-section input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.auth-section button {
+    width: 100%;
+    background-color: #d29366;
+    color: white;
+    padding: 12px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.auth-section button:hover {
+    background-color: #b6754c;
+}
+
+.auth-section p {
+    margin-top: 15px;
+}

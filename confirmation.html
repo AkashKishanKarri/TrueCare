@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareFlex - Booking Confirmed</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>TrueCare</h1>
+    </header>
+
+    <div class="confirmation-container">
+        <div class="checkmark">✔</div>
+        <h2>Booking Confirmed!</h2>
+        <p>Thank you for choosing TrueCare. Your service has been successfully booked.</p>
+
+        <div class="booking-summary" id="bookingSummary">
+            <!-- Booking details will be shown here -->
+        </div>
+
+        <a href="index.html">Return to Home</a>
+    </div>
+
+    <footer>
+        <p>© 2025 CareFlex. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const bookingDetails = JSON.parse(localStorage.getItem("bookingDetails"));
+            const paymentDetails = JSON.parse(localStorage.getItem("paymentDetails"));
+
+            if (bookingDetails && paymentDetails) {
+                document.getElementById("bookingSummary").innerHTML = `
+                    <p><strong>Name:</strong> ${bookingDetails.name}</p>
+                    <p><strong>Phone:</strong> ${bookingDetails.phone}</p>
+                    <p><strong>Service:</strong> ${bookingDetails.service}</p>
+                    <p><strong>Date:</strong> ${bookingDetails.date}</p>
+                    <p><strong>Address:</strong> ${bookingDetails.address}</p>
+                    <p><strong>Payment Method:</strong> ${paymentDetails.method}</p>
+                `;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

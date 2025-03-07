@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrueCare - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER SECTION -->
+    <header>
+        <h1>TrueCare</h1>
+        <nav>
+            <span id="welcomeText">Hi, Guest</span>
+            <a href="login.html" id="authLink">Login</a>
+        </nav>
+    </header>
+
+    <!-- NAVIGATION MENU -->
+    <nav>
+        <button onclick="location.href='index.html'">Home</button>
+        <button onclick="location.href='about.html'">About</button>
+        <button onclick="location.href='contact.html'">Contact</button>
+    </nav>
+
+
+    <!-- SERVICES SECTION -->
+    <main>
+        <!-- Banner Image -->
+
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service" onclick="redirectToService('babysitting.html')">
+                <h3>Babysitting</h3>
+                <p>Professional babysitters for your little ones.</p>
+                <button onclick="event.stopPropagation(); redirectToService('babysitting.html')">View Details</button>
+            </div>
+            <div class="service" onclick="redirectToService('petcare.html')">
+                <h3>Pet Care</h3>
+                <p>Reliable pet care services for your furry friends.</p>
+                <button onclick="event.stopPropagation(); redirectToService('petcare.html')">View Details</button>
+            </div>
+            <div class="service" onclick="redirectToService('elderlycare.html')">
+                <h3>Elderly Care</h3>
+                <p>Compassionate caregivers for the elderly.</p>
+                <button onclick="event.stopPropagation(); redirectToService('elderlycare.html')">View Details</button>
+            </div>
+            <div class="service" onclick="redirectToService('household.html')">
+                <h3>Household Help</h3>
+                <p>Helping hands for your daily chores.</p>
+                <button onclick="event.stopPropagation(); redirectToService('household.html')">View Details</button>
+            </div>
+        </div>
+
+        <!-- BOOKING SECTION -->
+        <!-- BOOKING SECTION -->
+        <!-- BOOKING SECTION -->
+        <section class="booking">
+            <h2>Book Our Services</h2>
+            <p>Schedule a trusted caregiver for your needs today.</p>
+
+            <button class="book-now-btn" onclick="location.href='booking.html'">Book Now</button>
+        </section>
+
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <p>© 2025 TrueCare. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let loggedInUser = localStorage.getItem("userName");
+            let isLoggedIn = localStorage.getItem("isLoggedIn");
+
+            if (isLoggedIn === "true") {
+                document.getElementById("welcomeText").innerText = `Hi, ${loggedInUser}`;
+                document.getElementById("authLink").innerText = "Logout";
+                document.getElementById("authLink").href = "#";
+                document.getElementById("authLink").addEventListener("click", function () {
+                    localStorage.removeItem("isLoggedIn"); // Logout only (keep user data)
+                    window.location.reload();
+                });
+            }
+        });
+
+        // Function to Redirect to Service Pages
+        function redirectToService(servicePage) {
+            window.location.href = servicePage;
+        }
+    </script>
+</body>
+
+</html>

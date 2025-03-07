@@ -1,0 +1,36 @@
+.banner {
+    width: 100%;
+    height: auto;
+    /* Adjusts to image height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    /* Adds space above & below */
+}
+
+.banner img {
+    width: 80%;
+    /* Keeps a neat layout */
+    height: auto;
+    /* Maintains aspect ratio */
+    border-radius: 10px;
+    /* Smooth rounded edges */
+    object-fit: cover;
+}
+
+
+29.<div class="banner">
+        <img src="banner1.jpeg" alt="CareFlex Banner">
+    </div>
+
+
+
+
+    font-family: Arial, sans-serif;
+    background: url('banner1.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    /* Makes it cover the full screen */
+    text-align: center;
+    margin: 0;
+    padding: 0;

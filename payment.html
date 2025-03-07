@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareFlex - Payment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>TrueCare</h1>
+    </header>
+
+    <h2>Payment Details</h2>
+
+    <form class="booking-form" id="paymentForm">
+        <label for="paymentMethod">Select Payment Method:</label>
+        <select id="paymentMethod" name="paymentMethod" required>
+            <option value="">-- Choose Payment Method --</option>
+            <option value="Credit Card">Credit/Debit Card</option>
+            <option value="UPI">UPI</option>
+            <option value="Net Banking">Net Banking</option>
+        </select>
+
+        <label for="cardDetails">Enter Card/UPI ID:</label>
+        <input type="text" id="cardDetails" name="cardDetails" required>
+
+        <button type="submit">Confirm Payment</button>
+    </form>
+
+    <footer>
+        <p>© 2025 CareFlex. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("paymentForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Store payment details (for confirmation display)
+            const paymentDetails = {
+                method: document.getElementById("paymentMethod").value,
+                card: document.getElementById("cardDetails").value
+            };
+
+            localStorage.setItem("paymentDetails", JSON.stringify(paymentDetails));
+
+            // Redirect to confirmation page
+            window.location.href = "confirmation.html";
+        });
+    </script>
+
+</body>
+
+</html>
