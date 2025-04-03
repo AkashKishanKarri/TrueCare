@@ -337,14 +337,14 @@ footer {
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    color: white; /* Text color */
-    background-color: #007bff; /* Blue background */
-    border-radius: 8px; /* Rounded corners */
+    color: white !important; /* Ensure text is white */
+    background-color: #007bff !important; /* Ensure blue background applies */
+    border-radius: 8px;
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
 /* Hover Effect */
 .btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: scale(1.05); /* Slight zoom effect */
+    background-color: #0056b3 !important;
+    transform: scale(1.05);
 }
