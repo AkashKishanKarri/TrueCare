@@ -329,3 +329,22 @@ footer {
 .auth-section p {
     margin-top: 15px;
 }
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white; /* Text color */
+    background-color: #007bff; /* Blue background */
+    border-radius: 8px; /* Rounded corners */
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect */
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
