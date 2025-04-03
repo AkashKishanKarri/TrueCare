@@ -182,17 +182,17 @@ footer {
 }
 
 .book-now-btn {
-    background-color: #d29366;
-    color: white;
-    padding: 12px 24px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: #d29366 !important;
+    color: white !important;
+    padding: 12px 24px !important;
+    font-size: 18px !important;
+    border: none !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
 }
 
 .book-now-btn:hover {
-    background-color: #b6754c;
+    background-color: #b6754c !important;
 }
 
 .booking-form {
